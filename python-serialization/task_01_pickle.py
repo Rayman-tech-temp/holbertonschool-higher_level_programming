@@ -43,4 +43,7 @@ class CustomObject():
             return (output)
 
         except pickle.UnpicklingError:
+            """
+            this should cover any issues with reading files with pickle.
+            """
             return (None)
