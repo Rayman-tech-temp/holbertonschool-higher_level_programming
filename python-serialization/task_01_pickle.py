@@ -42,7 +42,5 @@ class CustomObject():
             output = pickle.load(de_pickle)
             return (output)
 
-        except FileNotFoundError:
-            return (None)
-        except IOError:
+        except pickle.UnpicklingError:
             return (None)
