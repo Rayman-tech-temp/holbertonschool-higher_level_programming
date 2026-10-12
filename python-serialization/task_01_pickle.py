@@ -42,7 +42,8 @@ class CustomObject():
             output = pickle.load(de_pickle)
             return (output)
 
-        except pickle.UnpicklingError:
+        except (AttributeError,  EOFError, ImportError,
+                IndexError, IOError, pickle.UnpicklingError):
             """
             this should cover any issues with reading files with pickle.
             """
