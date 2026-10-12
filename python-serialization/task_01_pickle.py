@@ -37,6 +37,12 @@ class CustomObject():
         this opens a specified file with binary
         information and returns to the caller.
         """
-        de_pickle = open(filename, "rb")
-        output = pickle.load(de_pickle)
-        return (output)
+        try:
+            de_pickle = open(filename, "rb")
+            output = pickle.load(de_pickle)
+            return (output)
+
+        except FileNotFoundError:
+            return (None)
+        except IOError:
+            return (None)
