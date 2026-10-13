@@ -11,8 +11,12 @@ def convert_csv_to_json(csv_file):
     """
     this writes the binary into a JSON file
     """
-    with open(csv_file, mode='r', newline='', encoding='utf-8') as csvfile:
-        information = list(csv.DictReader(csvfile))
+    try:
+        with open(csv_file, mode='r', encoding='utf-8') as csvfile:
+            information = list(csv.DictReader(csvfile))
 
-    with open('data.json', mode='w', encoding='utf-8') as jsonfile:
-        json.dump(information, jsonfile, indent=4)
+        with open('data.json', mode='w', encoding='utf-8') as jsonfile:
+            json.dump(information, jsonfile, indent=4)
+
+    except IOError, EOFError:
+        return (False)
