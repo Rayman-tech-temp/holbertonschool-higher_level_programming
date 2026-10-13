@@ -17,9 +17,7 @@ def convert_csv_to_json(csv_file):
 
         with open('data.json', mode='w', encoding='utf-8') as jsonfile:
             json.dump(information, jsonfile, indent=4)
+        return (True)
 
     except IOError, EOFError:
         return (False)
-
-    finally:
-        return (True)
