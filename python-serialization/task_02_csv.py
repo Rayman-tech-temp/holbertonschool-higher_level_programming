@@ -20,3 +20,6 @@ def convert_csv_to_json(csv_file):
 
     except IOError, EOFError:
         return (False)
+
+    finally:
+        return (True)
