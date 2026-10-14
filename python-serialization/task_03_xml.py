@@ -34,7 +34,7 @@ def deserialize_from_xml(filename):
         root = tree.getroot()
 
         for child in root:
-            output.update({child.tag:child.text})
+            output.update({child.tag: child.text})
 
         return (output)
 
