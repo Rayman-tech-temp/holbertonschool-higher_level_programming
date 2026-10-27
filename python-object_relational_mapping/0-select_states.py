@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import sys
-import MYSQLdb
+import MySQLdb
 """
 a MySQLdb select all accepting arguments from terminal.
 """
