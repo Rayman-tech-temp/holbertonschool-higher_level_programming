@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
+import sys
+import MYSQLdb
 """
 a MySQLdb select all accepting arguments from terminal.
 """
 if __name__ == "__main__":
-    import MYSQLdb
-    import sys
     conn = MySQLdb.connect(host="localhost",
                            user=sys.argv[2],
                            passwd=sys.argv[3],
