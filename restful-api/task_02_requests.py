@@ -10,9 +10,9 @@ def fetch_and_print_posts():
     status = r.status_code
     print("Status Code : {}".format(status))
 
-    for key, value in info:
+    for key in info:
         if key == 'title' or key == 'body':
-            print(value)
+            print(info[key])
 
 def fetch_and_save_posts():
     r = requests.get('https://jsonplaceholder.typicode.com/posts')
