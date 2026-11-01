@@ -8,7 +8,7 @@ def fetch_and_print_posts():
     r = requests.get('https://jsonplaceholder.typicode.com/posts/1')
     info = r.json()
     status = r.status_code
-    print("Status Code : {}".format(status))
+    print("Status Code: {}".format(status))
 
     for key in info:
         if key == 'title' or key == 'body':
