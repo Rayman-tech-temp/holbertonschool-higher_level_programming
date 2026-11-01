@@ -21,7 +21,7 @@ def fetch_and_save_posts():
     indexes = []
     for key in info:
         indexes.append(key)
-    with open(fn, 'w', newline=='') as csvfile:
+    with open(fn, mode='w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=indexes)
         writer.writeheader()
         writer.writerows(info)
