@@ -14,8 +14,8 @@ if __name__ == "__main__":
                            passwd=sys.argv[2],
                            db=sys.argv[3])
     cur.execute(
-            "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id",
-            search)
+            "SELECT * FROM states WHERE name LIKE BINARY {} ORDER BY id"
+            .format(search))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
