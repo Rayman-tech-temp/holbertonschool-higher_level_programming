@@ -5,10 +5,14 @@ import requests
 import json
 import csv
 def fetch_and_print_posts():
-    r = requests.get('https://jsonplaceholder.typicode.com/posts/1')
+    r = requests.get('https://jsonplaceholder.typicode.com/posts')
     info = r.json()
-    print("Status Code : {}".format(r.status_code))
-    print(info.get('title')+info.get('body'))
+    status = r.status_code
+    print("Status Code : {}".format(status))
+
+    for key, value in info:
+        if key == 'title' OR key == 'body':
+            print(value)
 
 def fetch_and_save_posts():
     r = requests.get('https://jsonplaceholder.typicode.com/posts')
