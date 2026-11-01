@@ -11,7 +11,7 @@ def fetch_and_print_posts():
     print("Status Code : {}".format(status))
 
     for key, value in info:
-        if key == 'title' OR key == 'body':
+        if key == 'title' or key == 'body':
             print(value)
 
 def fetch_and_save_posts():
