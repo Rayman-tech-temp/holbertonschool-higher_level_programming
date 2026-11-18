@@ -11,4 +11,5 @@ async function fetchJSONdata () {
     console.log(movies.results[i].title);
   }
 }
-elem.addEventListener('click', fetchJSONdata);
+
+fetchJSONdata();

@@ -6,4 +6,4 @@ async function fetchJSONdata () {
   const character = await data.json();
   elem.textContent = character.name;
 }
-elem.addEventListener('click', fetchJSONdata);
+fetchJSONdata();
